@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback | Dapoer Bik Onda</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <a href="index.html" class="brand">
+
+        <div class="brand-logo">DBO</div>
+
+        <div>
+            <strong>DAPOER BIK ONDA</strong>
+            <span>Homemade Dessert</span>
+        </div>
+
+    </a>
+
+    <button class="menu-button" onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<nav id="menu" class="side-menu">
+
+    <div class="menu-header">
+
+        <strong>DAPOER BIK ONDA</strong>
+
+        <button onclick="toggleMenu()">×</button>
+
+    </div>
+
+    <a href="index.html">🏠 <span>Home</span></a>
+
+    <a href="produk.html">🛍️ <span>Produk & Harga</span></a>
+
+    <a href="feedback.html">
+        💬 <span>Feedback / Kritik & Saran</span>
+    </a>
+
+    <a href="contact.html">
+        📞 <span>Hubungi Kami</span>
+    </a>
+
+</nav>
+
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+
+<main>
+
+    <section class="page-hero">
+
+        <span>YOUR VOICE MATTERS</span>
+
+        <h1>Kritik & Saran</h1>
+
+        <p>
+            Pendapat Anda sangat berarti bagi kami.
+            Bantu Dapoer Bik Onda menjadi lebih baik.
+        </p>
+
+    </section>
+
+
+    <section class="section feedback-section">
+
+        <div class="feedback-box">
+
+            <h2>Sampaikan Pendapat Anda</h2>
+
+            <p>
+                Silakan sampaikan kritik, saran,
+                keluhan, maupun apresiasi Anda.
+            </p>
+
+
+            <form>
+
+                <label>Nama</label>
+
+                <input type="text"
+                       placeholder="Nama Anda (opsional)">
+
+
+                <label>Jenis Masukan</label>
+
+                <select>
+
+                    <option>Kritik</option>
+                    <option>Saran</option>
+                    <option>Keluhan</option>
+                    <option>Apresiasi</option>
+
+                </select>
+
+
+                <label>Pesan</label>
+
+                <textarea rows="6"
+                          placeholder="Tuliskan kritik atau saran Anda..."></textarea>
+
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    Kirim Feedback
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="feedback-side">
+
+            <span>ATAU</span>
+
+            <h2>Ingin berbicara langsung?</h2>
+
+            <p>
+                Hubungi kami melalui WhatsApp
+                untuk menyampaikan masukan secara langsung.
+            </p>
+
+            <a href="contact.html"
+               class="btn btn-dark">
+                Hubungi Kami
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <h3>DAPOER BIK ONDA</h3>
+
+    <p>Terima kasih atas masukan Anda.</p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
