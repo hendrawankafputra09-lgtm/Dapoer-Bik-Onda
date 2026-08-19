@@ -1,0 +1,1107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+
+    --yellow: #f4c430;
+    --yellow-dark: #dca900;
+
+    --dark: #292929;
+    --gray: #6b6b6b;
+    --light: #f5f5f3;
+    --white: #ffffff;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: var(--light);
+
+    color: var(--dark);
+
+    line-height: 1.7;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+.header {
+
+    height: 78px;
+
+    background: rgba(255,255,255,.96);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.brand-logo {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.brand strong {
+
+    display: block;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.brand span {
+
+    display: block;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+}
+
+
+.menu-button {
+
+    border: none;
+
+    background: var(--dark);
+
+    color: white;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+.side-menu {
+
+    position: fixed;
+
+    top: 0;
+
+    right: -360px;
+
+    width: 330px;
+
+    height: 100vh;
+
+    background: white;
+
+    z-index: 200;
+
+    padding: 25px;
+
+    box-shadow: -10px 0 40px rgba(0,0,0,.15);
+
+    transition: .35s ease;
+
+}
+
+
+.side-menu.active {
+
+    right: 0;
+
+}
+
+
+.menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 2px solid var(--yellow);
+
+}
+
+
+.menu-header button {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
+
+.side-menu a {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    padding: 18px 5px;
+
+    border-bottom: 1px solid #eee;
+
+    font-weight: 600;
+
+    transition: .2s;
+
+}
+
+
+.side-menu a:hover {
+
+    color: var(--yellow-dark);
+
+    padding-left: 12px;
+
+}
+
+
+.overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+    z-index: 150;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+}
+
+
+.overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    min-height: 650px;
+
+    padding: 90px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background: white;
+
+}
+
+
+.hero-content {
+
+    max-width: 600px;
+
+}
+
+
+.eyebrow {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--yellow-dark);
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(45px, 8vw, 82px);
+
+    line-height: 1.05;
+
+    letter-spacing: -4px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow-dark);
+
+}
+
+
+.hero-text {
+
+    margin: 25px 0;
+
+    color: var(--gray);
+
+    max-width: 520px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    transition: .25s;
+
+}
+
+
+.btn-primary {
+
+    background: var(--yellow);
+
+    color: var(--dark);
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--yellow-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-dark {
+
+    background: var(--dark);
+
+    color: white;
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid var(--dark);
+
+}
+
+
+.btn-yellow {
+
+    background: var(--yellow);
+
+    color: var(--dark);
+
+}
+
+
+.hero-decoration {
+
+    width: 380px;
+
+    height: 380px;
+
+    position: relative;
+
+}
+
+
+.yellow-circle {
+
+    width: 330px;
+
+    height: 330px;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+
+    position: absolute;
+
+    right: 0;
+
+    top: 20px;
+
+}
+
+
+.hero-card {
+
+    position: absolute;
+
+    right: 50px;
+
+    bottom: 45px;
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 30px;
+
+    width: 180px;
+
+    box-shadow: 15px 15px 0 var(--yellow);
+
+}
+
+
+.hero-card span {
+
+    font-size: 11px;
+
+}
+
+
+.hero-card strong {
+
+    display: block;
+
+    font-size: 20px;
+
+}
+
+
+/* SECTION */
+
+.section {
+
+    padding: 90px 8%;
+
+}
+
+
+.section-title span,
+.page-hero span,
+.product-info span,
+.contact-card span {
+
+    color: var(--yellow-dark);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: clamp(30px, 5vw, 48px);
+
+    line-height: 1.15;
+
+    margin-top: 10px;
+
+}
+
+
+.section-title p {
+
+    color: var(--gray);
+
+    margin-top: 15px;
+
+}
+
+
+.center {
+
+    text-align: center;
+
+}
+
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+}
+
+
+.about-content {
+
+    color: var(--gray);
+
+    max-width: 550px;
+
+}
+
+
+/* HIGHLIGHT */
+
+.highlight {
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 50px 8%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+}
+
+
+.highlight span {
+
+    color: var(--yellow);
+
+    font-weight: 800;
+
+}
+
+
+.highlight strong {
+
+    display: block;
+
+    font-size: 22px;
+
+}
+
+
+.highlight p {
+
+    color: #bbb;
+
+}
+
+
+/* PRODUCTS */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 45px;
+
+}
+
+
+.product-card {
+
+    background: white;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    border: 1px solid #e5e5e5;
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.1);
+
+}
+
+
+.product-image {
+
+    height: 260px;
+
+    overflow: hidden;
+
+    background: #ddd;
+
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+
+}
+
+
+.product-card:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+.product-info {
+
+    padding: 20px;
+
+}
+
+
+.product-info h3 {
+
+    margin: 4px 0;
+
+}
+
+
+.product-info strong {
+
+    color: var(--yellow-dark);
+
+}
+
+
+.center-button {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+}
+
+
+/* PAGE HERO */
+
+.page-hero {
+
+    padding: 100px 8%;
+
+    background: var(--dark);
+
+    color: white;
+
+}
+
+
+.page-hero h1 {
+
+    font-size: clamp(40px, 7vw, 70px);
+
+    line-height: 1.1;
+
+}
+
+
+.page-hero p {
+
+    color: #bbb;
+
+    max-width: 600px;
+
+    margin-top: 15px;
+
+}
+
+
+/* CTA */
+
+.cta {
+
+    background: var(--yellow);
+
+    padding: 65px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.cta span {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.cta h2 {
+
+    font-size: 40px;
+
+    line-height: 1.1;
+
+}
+
+
+/* FEEDBACK */
+
+.feedback-section {
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 40px;
+
+}
+
+
+.feedback-box,
+.feedback-side {
+
+    background: white;
+
+    padding: 40px;
+
+    border: 1px solid #ddd;
+
+}
+
+
+.feedback-box h2 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.feedback-box p,
+.feedback-side p {
+
+    color: var(--gray);
+
+    margin-bottom: 25px;
+
+}
+
+
+form label {
+
+    display: block;
+
+    margin: 15px 0 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    padding: 13px;
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--yellow-dark);
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+}
+
+
+form button {
+
+    border: none;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+}
+
+
+/* CONTACT */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+}
+
+
+.contact-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border: 1px solid #ddd;
+
+}
+
+
+.contact-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+    margin-bottom: 25px;
+
+    font-size: 22px;
+
+}
+
+
+.contact-card h3 {
+
+    margin: 7px 0;
+
+}
+
+
+.contact-card p {
+
+    color: var(--gray);
+
+    margin-bottom: 25px;
+
+}
+
+
+/* FOOTER */
+
+.footer {
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 60px 8% 25px;
+
+}
+
+
+.footer p {
+
+    color: #aaa;
+
+    max-width: 450px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin: 30px 0;
+
+    flex-wrap: wrap;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--yellow);
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid #444;
+
+    padding-top: 20px;
+
+    font-size: 12px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 70px 7%;
+
+    }
+
+
+    .hero-decoration {
+
+        display: none;
+
+    }
+
+
+    .about,
+    .feedback-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+
+    .highlight {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cta {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+}
+
+
+@media(max-width: 500px) {
+
+    .header {
+
+        padding: 0 5%;
+
+    }
+
+
+    .brand strong {
+
+        font-size: 12px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .section {
+
+        padding: 65px 6%;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-image {
+
+        height: 240px;
+
+    }
+
+
+    .side-menu {
+
+        width: 85%;
+
+    }
+
+
+    .page-hero {
+
+        padding: 70px 6%;
+
+    }
+
+}
